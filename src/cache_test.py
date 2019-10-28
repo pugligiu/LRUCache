@@ -1,7 +1,7 @@
 import unittest
 from threading import Thread
 import time
-from cacheThreads import LRUCache
+from cache import LRUCache
 
 
 class LRUCache_test_data(unittest.TestCase):
