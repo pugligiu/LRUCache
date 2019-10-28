@@ -11,9 +11,11 @@ It is suggested to use any version 3.x
 
 There are unit tests covering the code.
 They cover the expectations on data, logic and threading locking.
-To verify the unit tests, just run the command
+To verify the unit tests, just run in the terminal the command
 
-- `python -m unittest discover -p "*_test.py"`
+- `python3 -m unittest discover -p "*_test.py"`
+
+or execute the *main_test.py*.
 
 ## Diagrams
 
