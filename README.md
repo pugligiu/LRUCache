@@ -21,4 +21,4 @@ To verify the unit tests, just run the command
 ![Diagram of set method](img/Set_Diagram.jpg?raw=true "Diagram of set method")
 
 ### Get Diagram
-![Diagram of get method](img/Set_Diagram.jpg?raw=true "Diagram of get method")
+![Diagram of get method](img/Get_Diagram.jpg?raw=true "Diagram of get method")
