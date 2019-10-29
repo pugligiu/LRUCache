@@ -43,7 +43,7 @@ class LRUCache_test_logic(unittest.TestCase):
         del self.c0
         del self.c1
 
-    def test_insertItems(self):
+    def test_insertItem(self):
         '''
             Verify correct setting of the node and the LRU moves
         '''
@@ -109,9 +109,9 @@ class LRUCache_test_logic(unittest.TestCase):
 
         self.assertEqual(self.c1.cache_nodes, 2)
 
-    def test_getItems(self):
+    def test_getItem(self):
         '''
-            Get an item causes the move to head of the list and change of ttl
+            Get an item causes the or move to head of the list and change of ttl or eviction if ttl <= 1
         '''
         self.c0.set(1, 10, 2)
         n = self.c0.get(1)
