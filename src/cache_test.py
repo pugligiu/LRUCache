@@ -26,8 +26,12 @@ class LRUCache_test_data(unittest.TestCase):
     def test_excpetionLRUCache(self):
         with self.assertRaisesRegex(ValueError, "The capacity has to be an integer bigger than 0"):
             LRUCache("1")
+        with self.assertRaisesRegex(ValueError, "The capacity has to be an integer bigger than 0"):
+            LRUCache(0)
         with self.assertRaisesRegex(ValueError, "The time to live has to be an integer bigger than 0"):
             LRUCache(ttl="1")
+        with self.assertRaisesRegex(ValueError, "The time to live has to be an integer bigger than 0"):
+            LRUCache(ttl=0)
 
 
 class LRUCache_test_logic(unittest.TestCase):
@@ -111,7 +115,7 @@ class LRUCache_test_logic(unittest.TestCase):
 
     def test_getItem(self):
         '''
-            Get an item causes the or move to head of the list and change of ttl or eviction if ttl <= 1
+            Get an item causes either the move to head of the list and change of ttl or the eviction per ttl
         '''
         self.c0.set(1, 10, 2)
         n = self.c0.get(1)
